@@ -1,0 +1,7 @@
+<nav>
+  <h1>{{ index .Site.Params "author" }}</h1>
+  <li><a href={{ .Site.BaseURL }}>About</a></li>
+  <li><a href="{{ "/blog/" | relURL }}">Blog</a></li>
+  <li><a href="{{ "/assets/MaxwellMorgan_Resume.pdf" | relURL }}">Resume</a></li>
+  <li><a href="{{ "/contact/" | relURL }}">Contact</a></li>
+</nav>

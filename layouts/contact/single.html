@@ -1,0 +1,41 @@
+{{ partial "header.html" . }}
+<body>
+  <div class="container-fluid">
+    {{ partial "nav_bar.html" . }}
+    <div id="content">
+        {{ if .Params.email }}
+          <div class="row">
+            <div class="col-xs-3 col-sm-3 col-md-3 col-centered center-block">
+                <img class="contacticonlft" src="{{ "/assets/email_icon.png" | relURL }}">
+                <a class="contacttxtlft" href="mailto:{{ .Params.email }}">{{ .Params.email }}</a>
+            </div>
+          </div>
+        {{end}}
+        {{ if .Params.phone }} 
+          <div class="row">
+            <div class="col-xs-3 col-sm-3 col-md-3 col-centered center-block">
+              <img class="contacticonlft" src="{{ "/assets/phone_icon.png" | relURL }}">
+              <div class="phonetxt contacttxtleft"> {{ .Params.phone }} </div>
+            </div>
+          </div>
+        {{end}}
+        {{ if .Params.linkedin }} 
+          <div class="row">
+            <div class="col-xs-3 col-sm-3 col-md-3 col-centered center-block">
+              <img class="contacticonlft" src="{{ "/assets/linkedin_icon.png" | relURL }}">
+              <a class="contacttxtlft" href="{{ .Params.linkedin }}">LinkedIn</a> 
+            </div>
+          </div>
+        {{end}}
+        {{ if .Params.github }} 
+          <div class="row">
+            <div class="col-xs-3 col-sm-3 col-md-3 col-centered center-block">
+              <img class="contacticonlft" src="{{ "/assets/github_icon.png" | relURL }}">
+              <a class="contacttxtlft" href="{{ .Params.github }}">GitHub</a>
+            </div>
+          </div>
+        {{end}}
+    </div><!--content-->
+    {{ partial "footer.html" . }}
+  </div><!--container-fluid-->
+</body>

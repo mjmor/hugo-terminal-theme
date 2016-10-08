@@ -1,0 +1,16 @@
+{{ partial "header.html" . }}
+<body>
+  <div class="container-fluid">
+    {{ partial "nav_bar.html" . }}
+    <div id="content">
+      {{ range first 10 .Data.Pages  }}
+      <div class="row post-row">
+        <div class="col-xs-6 col-sm-6 col-md-6 col-centered center-block">
+        {{ .Render "summary" }}
+        </div>
+      </div>
+      {{ end  }}
+    </div><!--content-->
+    {{ partial "footer.html" . }}
+  </div><!--container-fluid-->
+</body>

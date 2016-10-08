@@ -1,0 +1,10 @@
+{{ if .Params.thumbnail }}
+  <img class="thumb-right img-rounded", src="{{ .Params.thumbnail | relURL }}">
+{{ end }}
+<a class="intern-link", href="{{ .Permalink  }}">{{ .Params.postname  }}</a>
+<p class="post-date">{{ .Date.Format "Mon, Jan 2, 2006"  }}</p>
+<br>
+<p>{{ .Summary }}</p>
+{{ if .Truncated }}
+<a class="read-more-link" href="{{ .Permalink }}">Read more...</a>
+{{ end }}
