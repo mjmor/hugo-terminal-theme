@@ -5,8 +5,9 @@
     <div id="content">
       <div class="row">
         <div class="col-xs-12 col-sm-8 col-md-6 col-centered center-block">
-          <h1 class="post-header">{{ .Params.postname }}</h1><p class="post-date">{{ .Date.Format "Mon, Jan 2, 2006"  }}</p>
-          <br>
+          <h2 class="post-header">{{ .Params.postname }}</h2>
+          <p>{{ .Date.Format "Mon, Jan 2, 2006"  }} &mdash; 
+          {{ .WordCount }} words &mdash; Read in {{ .ReadingTime }} min</p>
             {{ if .Params.thumbnail }}
               <img class="post-pic img-rounded", src="{{ .Params.thumbnail | relURL }}">
             {{ end }}
