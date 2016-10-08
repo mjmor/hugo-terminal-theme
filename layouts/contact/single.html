@@ -35,6 +35,14 @@
             </div>
           </div>
         {{end}}
+        {{ if .Params.twitter }} 
+          <div class="row">
+            <div class="col-xs-12 col-sm-8 col-md-3 col-centered center-block">
+              <img class="contacticonlft" src="{{ "/assets/twitter_icon.png" | relURL }}">
+              <div class="phonetxt contacttxtleft"> {{ .Params.twitter }} </div>
+            </div>
+          </div>
+        {{end}}
     </div><!--content-->
     {{ partial "footer.html" . }}
   </div><!--container-fluid-->
