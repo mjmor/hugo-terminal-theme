@@ -1,9 +1,9 @@
 {{ if .Params.thumbnail }}
   <img class="thumb-right img-rounded", src="{{ .Params.thumbnail | relURL }}">
 {{ end }}
-<a class="intern-link", href="{{ .Permalink  }}">{{ .Params.postname  }}</a>
-<p class="post-date">{{ .Date.Format "Mon, Jan 2, 2006"  }}</p>
-<br>
+<h4><a class="intern-link", href="{{ .Permalink  }}">{{ .Params.postname  }}</a></h4>
+<p>{{ .Date.Format "Mon, Jan 2, 2006"  }} &mdash;
+{{ .WordCount }} words &mdash; Read in {{ .ReadingTime }} min</p>
 <p>{{ .Summary }}</p>
 {{ if .Truncated }}
 <a class="read-more-link" href="{{ .Permalink }}">Read more...</a>
