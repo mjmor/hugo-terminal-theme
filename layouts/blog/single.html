@@ -4,7 +4,7 @@
     {{ partial "nav_bar.html" . }}
     <div id="content">
       <div class="row">
-        <div class="col-xs-6 col-sm-6 col-md-6 col-centered center-block">
+        <div class="col-xs-12 col-sm-8 col-md-6 col-centered center-block">
           <h1 class="post-header">{{ .Params.postname }}</h1><p class="post-date">{{ .Date.Format "Mon, Jan 2, 2006"  }}</p>
           <br>
             {{ if .Params.thumbnail }}
@@ -14,7 +14,7 @@
         </div><!--col-->
       </div><!--row-->
       <div class="row">
-        <div class="col-xs-6 col-sm-6 col-md-6 col-centered center-block">
+        <div class="col-xs-12 col-sm-8 col-md-6 col-centered center-block">
             {{ partial "disqus.html" . }}
         </div><!--col-->
       </div><!--row-->
