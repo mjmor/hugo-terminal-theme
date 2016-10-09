@@ -122,7 +122,24 @@ footer a{
     padding: 10px;
 }
 
+h2 {
+    color: #ffffff;
+}
+
+ol {
+    color: #ffffff;
+}
+
+ul {
+    color: #ffffff;
+}
+
 /* For styling links! */
+
+p a{
+    color: #737373;
+    font-weight: bold;
+}
 
 .intern-link {
     color: #84c754;
