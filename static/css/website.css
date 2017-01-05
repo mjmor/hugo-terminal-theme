@@ -47,6 +47,14 @@ nav h1 {
     margin: 10px 0 10px 0;
 }
 
+ol, ul {
+    color: #ffffff;
+}
+
+h2, h3, h4, h5 {
+    color: #ffffff;
+}
+
 #content {
     padding-top: 30px;
     padding-bottom: 100px;
